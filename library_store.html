@@ -1,0 +1,49 @@
+{% extends 'library_main.html' %}
+{% block title %} Store {% endblock title %}
+{% block body %}
+	<div class = "container" id = "search-book-area">
+		<form action = "/bookstore" method = "POST">
+			<select class = "searching" name = "search-by" id = "book-search">
+				<option value = "Book_ID">Book ID</option>
+				<option value = "Subject">Subject</option>
+				<option value = "Book_Name">Book Name</option>
+				<option value = "Author">Author</option>
+			</select>
+			<input type = "text" name = "search-value" id = "search-value-book" placeholder = "Search Book Details">
+			<button type = "submit" class = "button" name = "search-btn">SEARCH</button>
+		</form>
+	</div>
+	<p id = "current-row-count-books">Records Displayed = {{totalList|length}}</p>
+	<div class = "container" id = "book-list-view">
+		{% if totalList|length > 0 %}
+			<table id = "books-list" cellpadding = "5" cellspacing = "0">
+				<thead>
+					<tr>
+						<th>Book ID</th>
+						<th>Book Name</th>
+						<th>Subject</th>
+						<th>Author</th>
+						<th>Quantity</th>
+						<th colspan = "2">Action</th>
+					</tr>
+				</thead>
+				<tbody>
+					{% for item in totalList %}
+						<tr>
+							<td class = "unique_id">{{item[0]}}</td>
+							<td>{{item[1]}}</td>
+							<td>{{item[2]}}</td>
+							<td>{{item[3]}}</td>
+							<td>{{item[4]}}</td>
+							<td><a href = "/deletebook/{{item[0]}}" class = "access-button red"><i class="fa fa-trash"></i></a></td>
+							<td><a href = "/updatebook/{{item[0]}}" class = "access-button green"><i class="fa fa-edit"></i></a></td>
+						</tr>
+					{% endfor %}
+				</tbody>
+			</table>
+		{% endif %}
+	</div>
+	{% if message == 'CANNOT DELETE BORROWED BOOK' %}
+		<div class = "container" id = "delete-message" style = "background-color: rgb(230, 54, 48)">{{message}}</div>
+	{% endif %}
+{% endblock body %}

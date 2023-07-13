@@ -1,0 +1,32 @@
+{% extends 'library_main.html' %}
+{% block title %} Lend {% endblock title %}
+{% block body %}
+	<div class = "container" id = "add-borrower-info">
+		<fieldset>
+			<legend>Issue Book to Borrowers</legend>
+			<form action = "/lendbook" method = "POST">
+				<div class = "form-entry">
+					<p><label for = "borrowerid" class = "form-label">Borrower ID</label></p>
+					<p><input type = "text" class = "add-entry" name = "add-borrowerid" id = "add-borrowerid"></p>
+				</div>
+				<div class = "form-entry">
+					<p><label for = "bookid" class = "form-label">Book ID</label></p>
+					<p><input type = "text" class = "add-entry" name = "add-bookid" id = "add-bookid"></p>
+				</div>
+				<div class = "form-entry">
+					<p><label for = "returndate" class = "form-label">Return Date</label><br></p>
+					<p><input type = "date" class = "add-entry" name = "add-returndate" id = "add-returndate"></p>
+				</div>
+				<button type = "submit" class = "button large">Issue Book</button>
+			</form>
+		</fieldset>
+		{% if message == 'BORROWER ID IS NOT IN DATABASE' %}
+			<div class = "container" id = "issue-message" style = "background-color: rgb(230, 54, 48)">{{message}}</div>
+		{% elif message == 'ISSUE SUCCESSFUL' %}
+			<div class = "container" id = "issue-message" style = "background-color: rgb(35, 145, 53)">{{message}}</div>
+		{% endif %}
+		{% if message == 'BOOK ID IS NOT IN DATABASE' %}
+			<div class = "container" id = "book-message" style = "background-color: rgb(230, 54, 48)">{{message}}</div>
+		{% endif %}
+	</div>
+{% endblock body %}
