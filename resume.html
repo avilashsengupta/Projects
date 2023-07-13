@@ -1,0 +1,241 @@
+<!DOCTYPE>
+<html>
+	<head>
+		<meta charset="UTF-8" name="viewport">
+		<meta content="width=device-width, initial-scale=1.0">
+		<title>Resume Builder</title>
+		<link rel="icon" href="resume.png">
+		<link rel="stylesheet" href="resume.css">
+		<script src="resume.js"></script>
+	</head>
+	<body>
+        <section id="layout">
+        	<p class="header">CURRICULUM VITAE</p>
+        	<table class="cv_intro" cellpadding="10" cellspacing="0">
+        		<tr>
+        			<td class="label">Full Name :</td>
+        			<td id="name"></td>
+        			<td rowspan="5"><img src="temp.jpg" id="profile"></td>
+        		</tr>
+        		<tr>
+        			<td class="label">Mobile Number :</td>
+        			<td id="mobile"></td>
+        		</tr>
+        		<tr>
+        			<td class="label">Email ID :</td>
+        			<td id="email"></td>
+        		</tr>
+        		<tr>
+        			<td class="label">LinkedIn :</td>
+        			<td id="linkedin"></td>
+        		</tr>
+        		<tr>
+        			<td class="label">Github :</td>
+        			<td id="github"></td>
+        		</tr>
+        	</table>
+        	<table id="cv_objective" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead">CAREER OBJECTIVE</th></tr>
+        	</table>
+        	<table id="cv_education" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead" colspan="4">EDUCATION QUALIFICATION</th></tr>
+        		<tr>
+        			<th class="attribute">Degree/Examination Name</th>
+        			<th class="attribute">Year of Passing</th>
+        			<th class="attribute">Name of Institute</th>
+        			<th class="attribute">Percentage</th>
+        		</tr>
+        	</table>
+        	<table id="cv_achievements" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead">ACHIEVEMENTS</th></tr>
+        	</table>
+        	<table id="cv_training" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead" colspan="4">TRAINING DETAILS</th></tr>
+        		<tr>
+        			<th class="attribute">Title</th>
+        			<th class="attribute">Name of Oraganization</th>
+        			<th class="attribute">Location</th>
+        			<th class="attribute">Duration</th>
+        		</tr>
+        	</table>
+        	<table id="cv_projects" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead" colspan="3">PROJECTS UNDERTAKEN</th></tr>
+        		<tr>
+        			<th class="attribute">Title</th>
+        			<th class="attribute">Technology</th>
+        			<th class="attribute">Programming Language</th>
+        		</tr>
+        	</table>
+        	<table id="cv_certificate" cellpadding="10" cellspacing="5">
+        		<tr><th class="subhead">CERTIFICATIONS</th></tr>
+        	</table>
+        	<table id="cv_skills" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead" colspan="2">TECHNICAL SKILLSETS</th></tr>
+        		<tr>
+        			<th class="attribute">Technical Skill</th>
+        			<th class="attribute">Proficiency</th>
+        		</tr>
+        	</table>
+        	<table id="cv_interest" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead">AREA OF INTEREST</th></tr>
+        	</table>
+        	<table id="cv_language" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead" colspan="4">LANGUAGES KNOWN</th></tr>
+        		<tr>
+        			<th class="attribute">Languages</th>
+        			<th class="attribute">Read</th>
+        			<th class="attribute">Write</th>
+        			<th class="attribute">Speak</th>
+        		</tr>
+        	</table>
+			<table id="cv_personal" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead" colspan="2">INFORMATION</th></tr>
+        		<tr>
+        			<td class="label">Nationality :</td>
+        			<td id="nation"></td>
+        		</tr>
+        		<tr>
+        			<td class="label">Date of Birth :</td>
+        			<td id="dob"></td>
+        		</tr>
+        		<tr>
+        			<td class="label">Permanent Address :</td>
+        			<td id="address"></td>
+        		</tr>
+        	</table>       
+        	<table class="cv_declare" cellpadding="10" cellspacing="0">
+        		<tr><th class="subhead">DECLARATION</th></tr>
+        		<tr><td>I hereby declare that all the information given is true to the best of my knowledge</td></tr>
+        	</table>
+        	<table class="cv_signing" cellpadding="10" cellspacing="0">
+        		<tr>
+        			<td class="label">Date : </td>
+        			<td id="date"></td>
+        			<td><img src="temp.jpg" id="signature"></td>
+        		</tr>
+        		<tr>
+        			<td class="label">Place : </td>
+        			<td id="place"></td>
+        			<td id="identity"></td>
+        		</tr>
+        	</table>
+        </section>
+        <section id="builder">
+        	<p class="heading">CV BUILDER</p>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "PERSONAL DETAILS"></legend>
+        		<p><input type="text" class="data_entry" id="name_entry" placeholder="FULL NAME"></p>
+        		<p><input type="text" class="data_entry" id="phone_entry" placeholder="+CODE MOBILE"></p>
+        		<p><input type="text" class="data_entry" id="email_entry" placeholder="EMAIL ID"></p>
+        		<p><input type="text" class="data_entry" id="nation_entry" placeholder="NATIONALITY"></p>
+        		<p><input type="text" class="data_entry" id="dob_entry" placeholder="DOB [DD-MM-YYYY]"></p>
+        		<p><input type="text" class="data_entry" id="address_entry" placeholder="PERMANENT ADDRESS"></p>
+        		<p><input type="text" class="data_entry" id="linkedin_entry" placeholder="LINKEDIN ACCOUNT"></p>
+        		<p><input type="text" class="data_entry" id="github_entry" placeholder="GITHUB ACCOUNT"></p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "OBJECTIVE"></legend>
+        		<p>
+        			<input type="text" class="data_entry" id="objective_entry" placeholder="CAREER OBJECTIVE">
+        			<input type="button" class="upload" value="ADD" onclick="setCareerObjective()">
+        		</p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "EDUCATIONAL QUALIFICATION"></legend>
+        		<p><input type="text" class="data_entry" id="exam_entry" placeholder="DEGREE / EXAMINATION NAME"></p>
+        		<p><input type="text" class="data_entry" id="year_entry" placeholder="YEAR OF PASSING"></p>
+        		<p><input type="text" class="data_entry" id="institute_entry" placeholder="NAME OF INSTITUTE"></p>
+        		<p>
+        			<input type="text" class="data_entry" id="marks_entry" placeholder="PERCENTAGE">
+        			<input type="button" class="upload" value="ADD" onclick="setEducation()">
+        		</p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "ACHIEVEMENTS"></legend>
+        		<p>
+        			<input type="text" class="data_entry" id="achievement_entry" placeholder="ACHIEVEMENTS">
+        			<input type="button" class="upload" value="ADD" onclick="setAchievements()">
+        		</p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "TRAINING DETAILS"></legend>
+        		<p><input type="text" class="data_entry" id="trainingtitle_entry" placeholder="TITLE OF TRAINING"></p>
+        		<p><input type="text" class="data_entry" id="organisation_entry" placeholder="NAME OF ORGANSIATION"></p>
+        		<p><input type="text" class="data_entry" id="location_entry" placeholder="LOCATION"></p>
+        		<p>
+        			<input type="text" class="data_entry" id="duration_entry" placeholder="DURATION [IN MONTHS]">
+        			<input type="button" class="upload" value="ADD" onclick="setTrainingData()">
+        		</p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "PROJECTS UNDERTAKEN"></legend>
+        		<p><input type="text" class="data_entry" id="projecttitle_entry" placeholder="TITLE OF PROJECT"></p>
+        		<p><input type="text" class="data_entry" id="technology_entry" placeholder="TECHNOLOGY USED"></p>
+        		<p>
+        			<input type="text" class="data_entry" id="program_entry" placeholder="PROGRAMMING LANGUAGE">
+        			<input type="button" class="upload" value="ADD" onclick="setProjectData()">
+        		</p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "CERTIFICATION"></legend>
+        		<p>
+        			<input type="text" class="data_entry" id="certificate_entry" placeholder="CERTIFICATE NAME">
+        			<input type="button" class="upload" value="ADD" onclick="setCertification()">
+        		</p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "TECHNICAL SKILLS"></legend>
+        		<p><input type="text" class="data_entry" id="skill_entry" placeholder="TECHNICAL SKILL"></p>
+        		<p>
+        			<select type="dropdown" class="data_entry" id="proficiency_entry">
+        				<option value="" hidden>PROFICIENCY</option>
+        				<option value="Beginner">BEGINNER</option>
+        				<option value="Intermediate">INTERMEDIATE</option>
+        				<option value="Advanced">ADVANCED</option>
+        			</select>
+        			<input type="button" class="upload" value="ADD" onclick="setTechnicalSkill()">
+        		</p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "AREA OF INTEREST"></legend>
+        		<p>
+        			<input type="text" class="data_entry" id="interest_entry" placeholder="AREA OF INTEREST">
+        			<input type="button" class="upload" value="ADD" onclick="setInterestArea()">
+        		</p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "LANGUAGES KNOWN"></legend>
+        		<p><input type="text" class="data_entry" id="language_entry" placeholder="LANGUAGE NAME"></p>
+        		<p>
+        			<select type="dropdown" class="data_entry" id="read_entry">
+        				<option value="" hidden>READ</option>
+        				<option value="Yes">YES</option>
+        				<option value="No">NO</option>
+        			</select>
+        		</p>
+        		<p>
+        			<select type="dropdown" class="data_entry" id="write_entry">
+        				<option value="" hidden>WRITE</option>
+        				<option value="Yes">YES</option>
+        				<option value="No">NO</option>
+        			</select>
+        		</p>
+        		<p>
+        			<select type="dropdown" class="data_entry" id="speak_entry">
+        				<option value="" hidden>SPEAK</option>
+        				<option value="Yes">YES</option>
+        				<option value="No">NO</option>
+        			</select>
+        			<input type="button" class="upload" value="ADD" onclick="setKnownLanguage()">
+        		</p>
+        	</fieldset>
+        	<fieldset>
+        		<legend><input type = "button" class = "head_buttons" value = "OTHER INFORMATION"></legend>
+        		<p><input type="text" class="data_entry" id="profile_entry" placeholder="PROFILE IMAGE SOURCE [JPG/PNG/JPEG]"></p>
+        		<p><input type="text" class="data_entry" id="signature_entry" placeholder="SIGNATURE IMAGE SOURCE [JPG/PNG/JPEG]"></p>
+        		<p><input type="text" class="data_entry" id="place_entry" placeholder="CITY"></p>
+        	</fieldset>
+        	<button class="data_submit" onclick="printCV()">PRINT RESUME</button>
+        </section>
+    </body>
+</html>
